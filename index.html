@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Academia Medieval — Curso de Historia</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container" role="document">
+    <header>
+      <div class="logo" aria-hidden="true">AM</div>
+      <div class="head-text">
+        <div class="small">Academia Medieval</div>
+        <div class="small">Curso: Introducción a la Edad Media</div>
+      </div>
+      <nav aria-label="Navegación principal">
+        <a href="#programa">Programa</a>
+        <a href="#cronologia">Cronología</a>
+        <a href="#glosario">Glosario</a>
+        <a href="#actividades">Actividades</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div>
+        <h1>Introducción a la Edad Media</h1>
+        <p class="small">Un recorrido académico por instituciones, cultura y fuentes primarias.</p>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="#programa">Ver programa</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <main>
+        <section id="objetivos">
+          <h2>Objetivos</h2>
+          <p>Comprender las transformaciones políticas, sociales y culturales entre los siglos V y XV; analizar fuentes primarias; desarrollar habilidades críticas históricas.</p>
+        </section>
+
+        <section id="programa">
+          <h2>Programa y Lecciones</h2>
+          <div class="lesson">
+            <button class="accordion" data-target="l1">Lección 1: Caída del Imperio Romano y reinos germánicos</button>
+            <div id="l1" class="panel"><p class="small">Lectura: extractos de Procopio y fuentes arqueológicas. Actividad: análisis de fuente primaria.</p></div>
+          </div>
+
+          <div class="lesson">
+            <button class="accordion" data-target="l2">Lección 2: Feudalismo y estructura social</button>
+            <div id="l2" class="panel"><p class="small">Lectura: contratos señoriales; debate sobre interpretaciones historiográficas.</p></div>
+          </div>
+
+          <div class="lesson">
+            <button class="accordion" data-target="l3">Lección 3: Cultura, arte y manuscritos</button>
+            <div id="l3" class="panel"><p class="small">Taller: paleografía básica y análisis de iluminaciones.</p></div>
+          </div>
+        </section>
+
+        <section id="cronologia">
+          <h2>Cronología interactiva</h2>
+          <ul class="timeline" aria-live="polite">
+            <li><span>476</span><button class="detail-btn" data-info="Caída del Imperio Romano de Occidente">Detalles</button></li>
+            <li><span>800</span><button class="detail-btn" data-info="Coronación de Carlomagno">Detalles</button></li>
+            <li><span>1096</span><button class="detail-btn" data-info="Primera Cruzada">Detalles</button></li>
+          </ul>
+        </section>
+
+        <section id="actividades">
+          <h2>Actividades y Evaluación</h2>
+          <div class="quiz" aria-live="polite">
+            <div class="q">
+              <div><strong>Pregunta 1</strong> ¿En qué año se considera convencionalmente la caída de Roma?</div>
+              <div class="opts">
+                <button class="opt" data-correct="true">476</button>
+                <button class="opt">410</button>
+                <button class="opt">800</button>
+              </div>
+              <div class="feedback small" aria-hidden="true"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="glosario">
+          <h2>Glosario</h2>
+          <p><span class="glossary-term" data-def="Sistema socioeconómico basado en relaciones de vasallaje entre señores y vasallos.">Feudalismo</span> — término clave para entender la organización social.</p>
+        </section>
+<section id="fuentes">
+  <h2>Análisis de Fuente Primaria</h2>
+  <div class="source-container">
+    <div class="source-image">
+      <!-- Aquí iría una imagen de un manuscrito -->
+      <div class="hotspot" data-info="Letra capitular iluminada: Usada para marcar el inicio de secciones importantes."></div>
+    </div>
+    <div class="source-text">
+      <p><em>"Los hombres de armas deben proteger a los que laboran..."</em></p>
+      <p class="small">— Fragmento de 'Los Tres Órdenes', Estamento Medieval.</p>
+    </div>
+  </div>
+</section>
+<section id="simulador">
+  <h2>¿Cuál sería tu rol en el Feudalismo?</h2>
+  <p class="small">Responde según tus posesiones de tierra y títulos.</p>
+  <select id="land-select">
+    <option value="none">No poseo tierras</option>
+    <option value="fief">Poseo un feudo</option>
+    <option value="kingdom">Poseo varias provincias</option>
+  </select>
+  <button class="btn" onclick="calcularRol()">Descubrir rango</button>
+  <p id="rol-result" style="font-weight:bold; margin-top:10px;"></p>
+</section>
+        <footer>
+          <div class="small">Diseñado para uso académico. Créditos: plantilla base y recursos libres.</div>
+        </footer>
+      </main>
+
+      <aside>
+        <h2>Recursos</h2>
+        <ul>
+          <li><strong>Lecturas</strong> extractos de fuentes primarias; artículos académicos</li>
+          <li><strong>Multimedia</strong> imágenes de manuscritos; mapas interactivos</li>
+          <li><strong>Descargas</strong> programa en PDF; guía de actividades</li>
+        </ul>
+        <h2>Contacto</h2>
+        <p class="small">Bachiller Cristian Suarez — correo académico</p>
+      </aside>
+    </div>
+  </div>
+
+  <div id="tooltip" class="tooltip" role="tooltip" aria-hidden="true"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
